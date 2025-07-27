@@ -29,7 +29,7 @@ def traducir_mensaje(mensaje, origen):
 @bot.message_handler(func=lambda m: True)
 def handle_message(message):
     texto = message.text
-    origen = "user" if message.from_user.username != "ella_username" else "ella"
+    origen = "user" if message.from_user.username != "Wolfblita" else "ella"
     traduccion = traducir_mensaje(texto, origen)
     bot.send_message(message.chat.id, traduccion)
 
