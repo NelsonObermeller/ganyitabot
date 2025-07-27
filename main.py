@@ -13,9 +13,9 @@ openai.api_key = OPENAI_API_KEY
 
 def traducir_mensaje(mensaje, origen):
     if origen == "user":
-        prompt = f"Traduce este mensaje al ruso y al inglés, con tono amistoso:\n\n" + mensaje
+        prompt = f"Traduce este mensaje al ruso y al inglés, con tono amistoso:\n\n{mensaje}"
     else:
-        prompt = f"Traduce este mensaje al español y al inglés, con tono amistoso:\n\n" + mensaje
+        prompt = f"Traduce este mensaje al español y al inglés, con tono amistoso:\n\n{mensaje}"
 
     response = openai.ChatCompletion.create(
         model="gpt-3.5-turbo",
