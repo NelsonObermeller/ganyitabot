@@ -17,8 +17,9 @@ def traducir_mensaje(mensaje, origen):
     else:
         prompt = f"Traduce este mensaje al español y al inglés, con tono amistoso:\n\n" + mensaje
 
-    response = openai.ChatCompletion.create(
-        model="gpt-4o",
+   response = openai.ChatCompletion.create(
+    model="gpt-3.5-turbo",
+
         messages=[
             {"role": "system", "content": "Eres un traductor amistoso y preciso."},
             {"role": "user", "content": prompt}
